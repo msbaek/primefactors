@@ -18,8 +18,8 @@ public class PrimeFactorsTest {
         assertPrimeFactors(5, list(5));
         assertPrimeFactors(6, list(2, 3));
         assertPrimeFactors(7, list(7));
-        assertPrimeFactors(8, list(2,2,2));
-        assertPrimeFactors(9, list(3,3));
+        assertPrimeFactors(8, list(2, 2, 2));
+        assertPrimeFactors(9, list(3, 3));
     }
 
     private void assertPrimeFactors(int n, List<Integer> primeFactors) {
@@ -30,13 +30,12 @@ public class PrimeFactorsTest {
         ArrayList<Integer> factors = new ArrayList<Integer>();
         int divisor = 2;
         while (n > 1) {
-            while(n % divisor == 0) {
+            for (; n % divisor == 0; n /= divisor) {
                 factors.add(divisor);
-                n /= divisor;
             }
             divisor++;
         }
-        if(n > 1)
+        if (n > 1)
             factors.add(n);
         return factors;
     }
