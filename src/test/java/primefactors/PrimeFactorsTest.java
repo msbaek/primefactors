@@ -14,6 +14,7 @@ public class PrimeFactorsTest {
         assertPrimeFactors(1, list());
         assertPrimeFactors(2, list(2));
         assertPrimeFactors(3, list(3));
+        assertPrimeFactors(4, list(2, 2));
     }
 
     private void assertPrimeFactors(int n, List<Integer> primeFactors) {
