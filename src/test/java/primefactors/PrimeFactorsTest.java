@@ -33,6 +33,10 @@ public class PrimeFactorsTest {
                 factors.add(2);
                 n /= 2;
             }
+            while(n % 3 == 0) {
+                factors.add(3);
+                n /= 3;
+            }
         }
         if(n > 1)
             factors.add(n);
