@@ -28,11 +28,10 @@ public class PrimeFactorsTest {
 
     private List<Integer> of(int n) {
         ArrayList<Integer> factors = new ArrayList<Integer>();
-        int divisor = 2;
-        while (n > 1) {
+
+        for (int divisor = 2; n > 1; divisor++) {
             for (; n % divisor == 0; n /= divisor)
                 factors.add(divisor);
-            divisor++;
         }
         if (n > 1)
             factors.add(n);
