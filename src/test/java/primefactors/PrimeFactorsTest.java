@@ -20,6 +20,7 @@ public class PrimeFactorsTest {
         assertPrimeFactors(7, list(7));
         assertPrimeFactors(8, list(2, 2, 2));
         assertPrimeFactors(9, list(3, 3));
+        assertPrimeFactors(2 * 2 * 3 * 3 * 3 * 7 * 11 * 11 * 13, list(2, 2, 3, 3, 3, 7, 11, 11, 13));
     }
 
     private void assertPrimeFactors(int n, List<Integer> primeFactors) {
