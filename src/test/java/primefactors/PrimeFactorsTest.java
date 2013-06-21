@@ -11,19 +11,23 @@ import static org.junit.Assert.assertEquals;
 public class PrimeFactorsTest {
     @Test public void
     canFactorIntoPrimes() {
-        assertEquals(list(), of(1));
-        assertEquals(list(2), of(2));
-        assertEquals(list(3), of(3));
+        assertPrimeFactors(1, list());
+        assertPrimeFactors(2, list(2));
+        assertPrimeFactors(3, list(3));
+    }
+
+    private void assertPrimeFactors(int n, List<Integer> primeFactors) {
+        assertEquals(primeFactors, of(n));
     }
 
     private List<Integer> of(int n) {
         ArrayList<Integer> factors = new ArrayList<Integer>();
-        if(n > 1)
+        if (n > 1)
             factors.add(n);
         return factors;
     }
 
-    private List<Integer> list(Integer ... ints) {
+    private List<Integer> list(Integer... ints) {
         return Arrays.asList(ints);
     }
 }
